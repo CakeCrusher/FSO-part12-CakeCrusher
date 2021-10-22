@@ -1,0 +1,6 @@
+docker exec -it c4 bash
+redis-cli
+KEYS *
+GET todos_found
+SET todos_found "9001"
+DEL todos_found

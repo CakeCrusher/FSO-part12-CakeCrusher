@@ -1,0 +1,5 @@
+docker-compose -f ./docker-compose.dev.yml up
+docker exec -it 39 bash
+mongo -u root -p example
+use the_database
+db.todos.insert({text: "manually adding a todo", done: true})

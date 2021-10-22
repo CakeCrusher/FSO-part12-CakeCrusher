@@ -1,0 +1,16 @@
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+{
+  "text": "testing redis"
+}
+
+# PUT http://localhost:3000/todos/6171e4fa8144ca8d5b2eafd0 HTTP/1.1
+# content-type: application/json
+
+# {
+#   "done": true
+# }
+
+# GET http://localhost:3000/todos/6171e4fa8144ca8d5b2eafd0 HTTP/1.1
+# content-type: application/json
