@@ -1,0 +1,126 @@
+add simple user authentication
+  database
+    create User table
+      contains username, password
+
+
+table_synthesis Plans
+  make sure types are assumed
+ make a customtable in backend
+  create a hasura table in backend
+  create ui for designing table
+  create schema maker for custom table for inserting and selecting
+
+if an component requires a state of a parent component it is rerendered on change
+
+Plans
+  make it so that only users can upload 
+  show errors when fail to transcribe
+  add a graph function to the data
+  
+
+  deploy
+  add a running table
+
+  design data page
+    create InactedTranscription component
+      should give have a title, minimized description, and date
+      will expand to show a form with the table name and editable fields and submit button
+    create LoggedData component
+  incorporate inactedTranscriptions to storage
+
+Steps to add a table
+  database
+    make table
+      remember to add datTime and id, use the smallest unit of measurement
+  beckend
+    transcription-handler.js
+      create case 
+      table string
+    tableParser.js
+      create parser
+  frontend
+    schemas.ts
+      create ADD_<table_name> 
+      create GET_<table_name>
+    InactedTranscription.tsx
+      description case
+    InactedTranscription.tsx
+      saveTranscription schema case
+    Data.tsx
+      RNPickerSelect case 
+      onSelectChange case 
+
+
+Future
+  choose from Magnus UI or Dripsy as UI framework
+    https://dev.to/redbar0n/magnus-ui-vs-dripsy-chakra-ui-alternatives-for-react-native-web-4h28
+  add an assets folder
+  enable changing of table on client side
+    should generate the appropriate fields
+  incorporate auth0 to the user authentication
+
+Script
+
+
+
+
+
+
+  I have been working on this app which enables anyone of any background
+  to effortlessly create structured data
+
+  I works by simply speaking into the app
+  running 2 miles 10 minutes 33 seconds
+
+  then you can save it into the database 
+
+  for more information visit my other posts
+
+  I recently updated the app to enable the user to create their own table
+  (it works like this)
+  
+  the only thing missing is the incorporation of  natural language
+  processing to make sense of the data
+
+  if anyone would like to join the development of the app
+  please feel free to getin contact with me
+
+
+
+
+
+
+
+
+
+
+
+
+
+  The idea behind data logger is to be able to record data into
+  a database by only speaking into your phone
+
+  Data logger was developed with growth in mind so that when new categories
+  of data are concieved they can quickly be added to data logger
+
+  for example here I created a category for tracking my running
+  based on my experience adding the running categry
+  it takes about 30 minutes of programming to add the new category
+
+  so i will simply speak into my phone
+
+  this information is transcribed and parsed into fields
+  which can then be edited and discarded or submitted to the database
+
+
+  This is data logger
+  an application im working on that transcribes voice data
+  structured data to use in a database
+  for example
+  running 1.2 miles 2 minutes 32 seconds and as a result
+  awsome now were just gonna edit the data because im a liar
+  it only takes me 1 second to run that 
+  and then save it to the data
+  now its saved to the database
+  running is only one category there is also testing

@@ -2,7 +2,14 @@ version: '3.8'
 
 services:
   backend:
-    image: todo-backend
-    build: .
+    image: todo-backend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     ports:
       - 3000:3000
+    volumes:
+      - ./:/usr/src/todo-app/todo-backend
+    environment:
+      - MONGO_URL=mongodb://root:example@mongodb:27017/the_database
+      - REDIS_URL=//rediscache:6379

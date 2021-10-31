@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Data Logger",
+    "slug": "data-logger",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/data-logger.png",
+    "splash": {
+      "image": "./assets/data-logger.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/data-logger.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.INTERNET",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.sebastians.datalogger"
+    },
+    "web": {
+      "favicon": "./assets/data-logger.png"
+    },
+    "plugins": [
+      "expo-file-system"
+    ],
+    "scheme": "Data logger"
+  }
+}

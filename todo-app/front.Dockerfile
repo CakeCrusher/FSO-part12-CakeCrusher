@@ -2,7 +2,7 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ./todo-frontend/ .
 
 RUN npm ci
 

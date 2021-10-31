@@ -1,0 +1,33 @@
+services:
+  app:
+    image: expo-dev
+    build:
+      context: ./data-logger
+      dockerfile: ./dev.Dockerfile
+    environment:
+      - TEST_FETCH=http://localhost:8080/api/test
+    ports:
+      - 19001:19001
+      - 19002:19002
+      - 19006:19006
+    volumes:
+      - ./data-logger:/usr/src/app
+    container_name: expo-dev
+  backend:
+    image: expo-backend
+    build:
+      context: ./tmp-node
+      dockerfile: ./dev.Dockerfile
+
+    ports:
+      - 3000:3000
+    volumes:
+      - ./tmp-node:/usr/src/app
+    container_name: expo-backend
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./ngtinx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
